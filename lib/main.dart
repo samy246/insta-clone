@@ -2,6 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'insta_home.dart';
+import 'screens/login/login-page.dart';
+import 'screens/login/sign-in.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,9 +27,12 @@ class MyApp extends StatelessWidget {
             primaryTextTheme: TextTheme(
                 bodyText1: TextStyle(color: Colors.black, fontFamily: "Aveny")),
             textTheme: TextTheme(bodyText1: TextStyle(color: Colors.black))),
-        home: new InstaHome(),
+
+        home: LoginPage(),
         routes: <String, WidgetBuilder>{
           '/home': (BuildContext context) => InstaHome(),
+          '/sign-in': (BuildContext context) => SigninPage(),
+          '/login': (BuildContext context) => LoginPage(),
         });
   }
 }

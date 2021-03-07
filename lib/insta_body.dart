@@ -8,8 +8,15 @@ class InstaBody extends StatelessWidget {
     centerTitle: true,
     elevation: 1.0,
     leading: new Icon(Icons.camera_alt),
-    title: SizedBox(
-        height: 35.0, child: Image.asset("assets/images/insta_logo.png")),
+    title: Text(
+      'MoveOn',
+      style: TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+          fontWeight: FontWeight.w600,
+          fontStyle: FontStyle.italic,
+          fontFamily: 'Raleway'),
+    ),
     actions: <Widget>[
       Padding(
         padding: const EdgeInsets.only(right: 12.0),
